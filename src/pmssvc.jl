@@ -33,7 +33,6 @@ function MLJBase.fit(model::PMSSVC, verbosity, inX; optimizer = () -> OSQP.Optim
     while U_prev != U
         U_prev = U
         calcs = @distributed vcat for j in 1:model.spheres
-            println(j)
             Xᵢ = X[filter(i -> U[i, j] == 1, 1:N), :]
             if isempty(Xᵢ)
                 []
