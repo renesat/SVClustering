@@ -1,8 +1,8 @@
 module SVClustering
 
 include("core.jl")
-include("svdd.jl")
+include("metrics.jl")
+include("svc.jl")
 include("pmssvc.jl")
-
 
 end
